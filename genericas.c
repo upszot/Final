@@ -132,3 +132,4 @@ int isVocal(char Letra)
     }
     return retorno;
 }
+

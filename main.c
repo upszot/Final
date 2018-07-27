@@ -23,15 +23,22 @@ int main()
     ArrayList *List;
     List= al_newArrayList();
 
+    ArrayList *ListLetrasIN;
+    ListLetrasIN= al_newArrayList();
+
+    ArrayList *ListLetrasOUT;
+    ListLetrasOUT= al_newArrayList();
+
     ArrayList *ListTemp;
     ListTemp= al_newArrayList();
+
+    char * cadena;
 
     char seguir='s';
     int opcion=0;
     int Error=-9;
 
-
-    if(List!=NULL && ListTemp!=NULL)
+    if(List!=NULL && ListTemp!=NULL && cadena!=NULL)
     {
         Error=0;
     }
@@ -42,8 +49,10 @@ int main()
         {
             menu(   "\n 1. Parse del archivo CVS"
                     "\n 2. Completar campos (vocal,consonante)"
-                    "\n 3. Listar"
+                    "\n 3. Generar Arrays"
                     "\n 4. Generar archivos"
+                    "\n 5. Listar datos.cvs"
+                    "\n 6. Listar arrays punto 3"
                 );
 
             scanf("%d",&opcion);
@@ -64,14 +73,41 @@ int main()
                     }
                     */
                     break;
-                case 3://LISTAR
-                    Error=al_MuestraElemento_desde_hasta(List,"Original  datos.cvs ",Muestra1Record ,0,List->len(List),PAGINADO);
+                case 3://
+                    //Error=al_MuestraElemento_desde_hasta(List,"Original  datos.cvs ",Muestra1Record ,0,List->len(List),PAGINADO);
+                    cadena=get_char("Ingrese cadenade caracteres",100);
+                    printf("\n Cadena: %s\n",cadena);
+
+                    Error= parserEstructuraCadena(cadena,100, ListTemp);
+                    Error = al_CompletaCampo(ListTemp,completa_vocal_consonante );
+
+
+                    system("pause");
                     break;
                 case 4:
                     /*
                         ListTemp= al_filter(ListAlumno ,funcionQueFiltra);
                         Error=al_MuestraElemento_desde_hasta(ListTemp,"Alumnos Filtrado por Edad",Muestra1Record ,0,ListTemp->len(ListTemp),PAGINADO);
                         */
+                    break;
+                case 5://LISTAR
+                    Error=al_MuestraElemento_desde_hasta(List,"Original  datos.cvs ",Muestra1Record ,0,List->len(List),PAGINADO);
+                    break;
+                case 6:
+
+                    //al_sort(ListTemp,compara_elementos_Estructura,0);
+                    Error=al_MuestraElemento_desde_hasta(ListTemp,"List Cadena",Muestra1Record ,0,ListTemp->len(ListTemp),PAGINADO);
+
+
+                    ListLetrasIN= al_filter2(List, al_indexOfPotenciado,ListTemp);
+                    printf("Tam: %d",ListLetrasIN->len(ListLetrasIN));
+                    system("pause");
+                    Error=al_MuestraElemento_desde_hasta(ListLetrasIN,"Filtrada",Muestra1Record ,0,ListLetrasIN->len(ListLetrasIN),PAGINADO);
+
+                    //ArrayList* al_filter(ArrayList* listIn , int (*functionFilter)(void* ,void*),ArrayList* listBuscar)
+                    //ListLetrasOUT
+
+                    //compara_elementos_Estructura
                     break;
                 case 0:
                     seguir = 'n';

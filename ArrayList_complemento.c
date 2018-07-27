@@ -6,6 +6,8 @@
 #include "genericas.h"
 #include "ArrayList_complemento.h"
 
+//int al_indexOfPotenciado(ArrayList* this, void* pElement)
+
 ArrayList* al_filter(ArrayList* listIn , int (*functionFilter)(void*))
 {
     ArrayList *ListaTemp=NULL;
@@ -16,6 +18,24 @@ ArrayList* al_filter(ArrayList* listIn , int (*functionFilter)(void*))
         for(int i=0;i<listIn->len(listIn);i++)
         {
                 if( functionFilter(listIn->get(listIn,i) )==1  )
+                {
+                    ListaTemp->add(ListaTemp,listIn->get(listIn,i) );
+                }
+        }
+        return ListaTemp;
+    }
+}
+
+ArrayList* al_filter2(ArrayList* listIn , int (*functionFilter)(void* ,void*),ArrayList* listBuscar)
+{
+    ArrayList *ListaTemp=NULL;
+    ListaTemp= al_newArrayList();
+
+    if(listIn!=NULL && functionFilter!=NULL && ListaTemp!=NULL && listBuscar!=NULL)
+    {
+        for(int i=0;i<listIn->len(listIn);i++)
+        {
+                if( functionFilter(listBuscar,listIn->get(listIn,i) )==1  )
                 {
                     ListaTemp->add(ListaTemp,listIn->get(listIn,i) );
                 }
@@ -87,13 +107,13 @@ int al_CompletaCampo(ArrayList *this,int (*pFunc)(void*) )
     int retorno=-1;
     if(this!=NULL )
     {
-        retorno=0;
+        retorno=-2;
 
         if(this->isEmpty(this)==0)
         {//No esta vacio
             for(int index=0; index<this->len(this) ; index++)
             {
-                pFunc(al_get(this,index));
+                retorno=pFunc(al_get(this,index));
 
             }
         }//if(this->isEmpty(this)==0)

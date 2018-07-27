@@ -29,6 +29,10 @@ int completa_vocal_consonante(ELetra * record);
 int cargarDesdeArchivo(const char* nombreArchivo, ArrayList* this);
 int parserEstructura(FILE* pFile, ArrayList* this);
 
+int parserEstructuraCadena(char* cadena,int LongitudCadena, ArrayList* this);
+int compara_elementos_Estructura(void* pElementA,void* pElementB);
+
+int al_indexOfPotenciado(void* this, void* pElement);
 //#------- sin revizar ----#
 /*
 
