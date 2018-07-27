@@ -1,7 +1,9 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+
 #include "ArrayList.h"
+#include "ArrayList_complemento.h"
 #include "Estructura.h"
 #include "genericas.h"
 
@@ -25,8 +27,35 @@ int ELetra_setNombre(ELetra* this, const char* dato)
     return 0;
 }
 
+int ELetra_setVocal(ELetra* this, int dato)
+{
+    this->vocal = dato;
+    return 0;
+}
+
+int ELetra_setConsonante(ELetra* this, int dato)
+{
+    this->consonante = dato;
+    return 0;
+}
 // ----------------------------
 
+int Muestra1Record(ELetra * record)
+{
+    int retorno=-1;
+    if(record !=NULL)
+    {
+        retorno=0;
+        printf("letra: %c  \t",record->letra);
+        printf("Nombre: %s        \t\t",record->Nombre);
+        printf("vocal: %d     \t",record->vocal);
+        printf("consonante: %d    \n",record->consonante);
+    }
+    return retorno;
+}
+
+
+// -------- ARCHIVOS -------------
 int parserEstructura(FILE* pFile, ArrayList* this)
 {
     int retorno = -1;
@@ -135,7 +164,7 @@ int cargarDesdeArchivo(const char* nombreArchivo, ArrayList* this)
     return retorno;
 }
 
-
+// ------------------------
 
 /*
 int funcionQueFiltra(void* item)
@@ -208,19 +237,6 @@ char get_Sexo(void * record)
 }
 
 
-int Muestra1Record(ELetra * record)
-{
-    int retorno=-1;
-    if(record !=NULL)
-    {
-        retorno=0;
-        printf("Nombre: %s    \t\t",record->Nombre);
-        printf("Edad: %d \t",record->Edad);
-        printf("Legajo: %d \t",record->Legajo);
-        printf("Sexo: %s \n",record->Sexo);
-    }
-    return retorno;
-}
 
 int compara_elementos_Estructura(void* pElementA,void* pElementB)
 {

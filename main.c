@@ -3,11 +3,16 @@
 #include <string.h>
 
 #include "ArrayList.h"
+#include "ArrayList_complemento.h"
 #include "Estructura.h"
 #include "genericas.h"
 
 
 #define NOMBRE_ARCHIVO "datos.csv"
+
+#define ARCHIVO_COMPLETO "Completo.csv"
+#define ARCHIVO_REPETIDO "repetido.csv"
+#define ARCHIVO_DEPURADO "depurado.csv"
 
 #define PAGINADO 10
 
@@ -56,8 +61,8 @@ int main()
                     }
                     */
                     break;
-                case 3://PROXIMO CLIENTE
-                    //Error=al_MuestraElemento_desde_hasta(ListAlumno,"Alumnos ",Muestra1Record ,0,ListAlumno->len(ListAlumno),PAGINADO);
+                case 3://LISTAR
+                    Error=al_MuestraElemento_desde_hasta(List,"Original  datos.cvs ",Muestra1Record ,0,List->len(List),PAGINADO);
                     break;
                 case 4:
                     /*

@@ -1,0 +1,58 @@
+# depslib dependency file v1.0
+1530316606 source:c:\test\final-master\final\arraylist.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"ArrayList.h"
+
+1530316606 c:\test\final-master\final\arraylist.h
+
+1532720102 source:c:\test\final-master\final\genericas.c
+	"genericas.h"
+
+1532721067 c:\test\final-master\final\genericas.h
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+
+1532721065 source:c:\test\final-master\final\arraylist_complemento.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"ArrayList.h"
+	"Estructura.h"
+	"genericas.h"
+	"ArrayList_complemento.h"
+
+1532722652 c:\test\final-master\final\estructura.h
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"ArrayList.h"
+	"genericas.h"
+
+1532721074 c:\test\final-master\final\arraylist_complemento.h
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"ArrayList.h"
+	"genericas.h"
+
+1532722527 source:c:\test\final-master\final\estructura.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"ArrayList.h"
+	"ArrayList_complemento.h"
+	"Estructura.h"
+	"genericas.h"
+
+1532722642 source:c:\test\final-master\final\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"ArrayList.h"
+	"ArrayList_complemento.h"
+	"Estructura.h"
+	"genericas.h"
+
