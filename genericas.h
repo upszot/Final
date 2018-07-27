@@ -3,6 +3,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include <ctype.h>
 
 #endif // GENERICAS_H_INCLUDED
 //#------------- Genericas -------------#
@@ -44,4 +45,18 @@ char *get_char(char *sms,int LongitudCadena);
 int get_int_Rango(char *sms,int desde,int hasta);
 
 
+/** \brief pasa de letra a numero
+ *
+ * \param charInt char*
+ * \return int
+ *
+ */
 int charToint(char* charInt);
+
+/** \brief identifica si es vocal (1) o consonante (0), devuelve (-1) si hay error
+ *
+ * \param Letra char
+ * \return int
+ *
+ */
+int isVocal(char Letra);

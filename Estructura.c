@@ -38,7 +38,16 @@ int ELetra_setConsonante(ELetra* this, int dato)
     this->consonante = dato;
     return 0;
 }
-// ----------------------------
+// --------- GETERS -------------------
+char ELetra_getLetra(void * record)
+{
+    ELetra *tmp_1;
+    tmp_1=(ELetra * ) record;
+
+    return tmp_1->letra;
+}
+
+// ---------------------------------------
 
 int Muestra1Record(ELetra * record)
 {
@@ -181,30 +190,6 @@ int funcionQueFiltra(void* item)
 }
 
 
-int Alumno_setEdad(EAlumno* this, int dato)
-{
-    this->Edad = dato;
-    return 0;
-}
-
-int Alumno_setLegajo(EAlumno* this, int dato)
-{
-    this->Legajo = dato;
-    return 0;
-}
-
-int Alumno_setSexo(EAlumno* this,  char *dato)
-{
-    strcpy(this->Sexo,dato);
-    return 0;
-}
-
-
-int Alumno_setName(EAlumno* this, const char* name)
-{
-    strcpy(this->Nombre, name);
-    return 0;
-}
 
 int get_Edad(EAlumno * record)
 {

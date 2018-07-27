@@ -116,3 +116,18 @@ int charToint(char* charInt)
     nro = atoi(charInt);
     return nro;
 }
+
+int isVocal(char Letra)
+{// -1 si hay error, 0 consonante 1 vocal
+    int retorno=-1;
+    if(isalpha(Letra))
+    {
+        Letra=toupper( Letra );
+        retorno=0;//si devuelve esto es consonante
+        if(Letra=='A'||Letra=='E'||Letra=='I'||Letra=='O'||Letra=='U')
+        {
+            retorno=1;
+        }
+    }
+    return retorno;
+}
