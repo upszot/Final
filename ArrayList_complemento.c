@@ -82,3 +82,22 @@ int al_MuestraElemento_desde_hasta(ArrayList *this,char *Titulo,int (*pFunc)(voi
 }
 
 
+int al_CompletaCampo(ArrayList *this,int (*pFunc)(void*) )
+{
+    int retorno=-1;
+    if(this!=NULL )
+    {
+        retorno=0;
+
+        if(this->isEmpty(this)==0)
+        {//No esta vacio
+            for(int index=0; index<this->len(this) ; index++)
+            {
+                pFunc(al_get(this,index));
+
+            }
+        }//if(this->isEmpty(this)==0)
+
+    }//if(this!=NULL && Titulo!=NULL)
+    return retorno;
+}

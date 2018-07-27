@@ -24,6 +24,7 @@ int ELetra_setVocal(ELetra* this, int dato);
 int ELetra_setConsonante(ELetra* this, int dato);
 
 int Muestra1Record(ELetra * record);
+int completa_vocal_consonante(ELetra * record);
 
 int cargarDesdeArchivo(const char* nombreArchivo, ArrayList* this);
 int parserEstructura(FILE* pFile, ArrayList* this);

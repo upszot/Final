@@ -63,6 +63,25 @@ int Muestra1Record(ELetra * record)
     return retorno;
 }
 
+int completa_vocal_consonante(ELetra * record)
+{
+    int retorno=-1;
+    if(record !=NULL)
+    {
+        //  si es vocal (1) o consonante (0), devuelve (-1) si hay error
+        if( isVocal(ELetra_getLetra(record) ) ==1 )
+        {
+            retorno= ELetra_setVocal(record, 1);
+        }
+
+        if( isVocal(ELetra_getLetra(record) ) ==0 )
+        {
+            retorno= ELetra_setConsonante(record, 1);
+        }
+    }
+    //system("pause");
+    return retorno;
+}
 
 // -------- ARCHIVOS -------------
 int parserEstructura(FILE* pFile, ArrayList* this)

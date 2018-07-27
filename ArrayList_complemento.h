@@ -8,3 +8,11 @@ int al_MuestraElemento_desde_hasta(ArrayList *this,char *Titulo,int (*pFunc)(voi
 ArrayList* clonaOrdenado(ArrayList *this,int (*pFunc)(void* ,void*),int orden);
 ArrayList* al_filter(ArrayList* listIn , int (*functionFilter)(void*));
 
+
+/** \brief Recorre ArrayList y entrega cada recorset a la funcion para que trabaje
+ *
+ * \param void*
+ * \return int al_CompletaCampo(ArrayList *this,int
+ *
+ */
+int al_CompletaCampo(ArrayList *this,int (*pFunc)(void*) );

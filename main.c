@@ -53,6 +53,8 @@ int main()
                     Error = cargarDesdeArchivo(NOMBRE_ARCHIVO, List);
                     break;
                 case 2:
+                    Error = al_CompletaCampo(List,completa_vocal_consonante );
+                    //int completa_vocal_consonante(ELetra * record)
                     /*
 //                    ListAlumno->sort(compara_elementos_Estructura,1)
                     ListTemp= clonaOrdenado(ListAlumno,compara_elementos_Estructura,1);

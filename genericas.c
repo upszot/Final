@@ -122,8 +122,9 @@ int isVocal(char Letra)
     int retorno=-1;
     if(isalpha(Letra))
     {
-        Letra=toupper( Letra );
         retorno=0;//si devuelve esto es consonante
+      //  printf("2........ %c\n ",Letra);
+        Letra=toupper( Letra );
         if(Letra=='A'||Letra=='E'||Letra=='I'||Letra=='O'||Letra=='U')
         {
             retorno=1;
