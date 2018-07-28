@@ -26,16 +26,16 @@ ArrayList* al_filter(ArrayList* listIn , int (*functionFilter)(void*))
     }
 }
 
-ArrayList* al_filter2(ArrayList* listIn , int (*functionFilter)(void* ,void*),ArrayList* listBuscar)
+ArrayList* al_filter2(ArrayList* listIn , int (*functionFilter)(void* ,void*),ArrayList* listBuscar,int Existe)
 {
     ArrayList *ListaTemp=NULL;
     ListaTemp= al_newArrayList();
 
-    if(listIn!=NULL && functionFilter!=NULL && ListaTemp!=NULL && listBuscar!=NULL)
+    if(listIn!=NULL && functionFilter!=NULL && ListaTemp!=NULL && listBuscar!=NULL && ( Existe==0 || Existe==1 ))
     {
         for(int i=0;i<listIn->len(listIn);i++)
         {
-                if( functionFilter(listBuscar,listIn->get(listIn,i) )==1  )
+                if( functionFilter(listBuscar,listIn->get(listIn,i) )== Existe )
                 {
                     ListaTemp->add(ListaTemp,listIn->get(listIn,i) );
                 }

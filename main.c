@@ -99,8 +99,11 @@ int main()
                     Error=al_MuestraElemento_desde_hasta(ListTemp,"List Cadena",Muestra1Record ,0,ListTemp->len(ListTemp),PAGINADO);
 
 
-                    ListLetrasIN= al_filter2(List, al_indexOfPotenciado,ListTemp);
-                    Error=al_MuestraElemento_desde_hasta(ListLetrasIN,"Lista Filtrada con ListaCadena",Muestra1Record ,0,ListLetrasIN->len(ListLetrasIN),PAGINADO);
+                    ListLetrasIN= al_filter2(List, al_indexOfPotenciado,ListTemp,1);
+                    Error=al_MuestraElemento_desde_hasta(ListLetrasIN,"Lista Con Letras Filtrada a partir de ListaCadena",Muestra1Record ,0,ListLetrasIN->len(ListLetrasIN),PAGINADO);
+
+                    ListLetrasOUT= al_filter2(List, al_indexOfPotenciado,ListTemp,0);
+                    Error=al_MuestraElemento_desde_hasta(ListLetrasOUT,"Lista SIN Letras Filtrada a partir de ListaCadena",Muestra1Record ,0,ListLetrasOUT->len(ListLetrasOUT),PAGINADO);
 
                     //ArrayList* al_filter(ArrayList* listIn , int (*functionFilter)(void* ,void*),ArrayList* listBuscar)
                     //ListLetrasOUT

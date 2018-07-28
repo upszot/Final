@@ -35,14 +35,16 @@ ArrayList* clonaOrdenado(ArrayList *this,int (*pFunc)(void* ,void*),int orden);
 ArrayList* al_filter(ArrayList* listIn , int (*functionFilter)(void*));
 
 
-/** \brief Devuelve un nuevo Array generado a partir del filtro de la funcion entregada y el los elementos cargados en el listbuscar
+/** \brief Devuelve un nuevo Array generado a partir del filtro de la funcion entregada
+ *          y el los elementos cargados en el listbuscar
+ *          El parametro Existe  determina si el nuevo array debe contener los datos encontrados o la inversa
  *
  * \param void*
  * \param void*
  * \return ArrayList* al_filter2(ArrayList* listIn , int
  *
  */
-ArrayList* al_filter2(ArrayList* listIn , int (*functionFilter)(void* ,void*),ArrayList* listBuscar);
+ArrayList* al_filter2(ArrayList* listIn , int (*functionFilter)(void* ,void*),ArrayList* listBuscar,int Existe);
 
 /** \brief Recorre ArrayList y entrega cada recorset a la funcion para que trabaje
  *

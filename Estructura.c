@@ -301,6 +301,8 @@ int al_indexOfPotenciado(void* this, void* pElement)
     int returnAux = -1;
     if(this!=NULL && pElement!=NULL)
     {
+        returnAux = 0;
+
         ArrayList *Aux_List;
         Aux_List= (ArrayList*)  this;
 
@@ -312,7 +314,7 @@ int al_indexOfPotenciado(void* this, void* pElement)
         {
             Aux= (ELetra * ) al_get(Aux_List,i);
 
-            if( (char)  Aux->letra ==  tmp_1->letra)
+            if( Aux->letra ==  tmp_1->letra)
             {//encontro
                 returnAux = 1;
                 break;
