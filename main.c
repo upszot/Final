@@ -63,52 +63,30 @@ int main()
                     break;
                 case 2:
                     Error = al_CompletaCampo(List,completa_vocal_consonante );
-                    //int completa_vocal_consonante(ELetra * record)
-                    /*
-//                    ListAlumno->sort(compara_elementos_Estructura,1)
-                    ListTemp= clonaOrdenado(ListAlumno,compara_elementos_Estructura,1);
-                    if(ListTemp!=NULL)
-                    {
-                        Error=al_MuestraElemento_desde_hasta(ListTemp,"Alumnos Ordenados por Edad",Muestra1Record ,0,ListTemp->len(ListTemp),PAGINADO);
-                    }
-                    */
                     break;
                 case 3://
-                    //Error=al_MuestraElemento_desde_hasta(List,"Original  datos.cvs ",Muestra1Record ,0,List->len(List),PAGINADO);
                     cadena=get_char("Ingrese cadenade caracteres",100);
                     //printf("\n Cadena: %s\n",cadena);
 
                     Error= parserEstructuraCadena(cadena,100, ListTemp);
                     Error = al_CompletaCampo(ListTemp,completa_vocal_consonante );
 
-
                     system("pause");
                     break;
-                case 4:
-                    /*
-                        ListTemp= al_filter(ListAlumno ,funcionQueFiltra);
-                        Error=al_MuestraElemento_desde_hasta(ListTemp,"Alumnos Filtrado por Edad",Muestra1Record ,0,ListTemp->len(ListTemp),PAGINADO);
-                        */
+                case 4: //generar archivos
+
                     break;
                 case 5://LISTAR
                     Error=al_MuestraElemento_desde_hasta(List,"Original  datos.cvs ",Muestra1Record ,0,List->len(List),PAGINADO);
                     break;
                 case 6:
-
-                    //al_sort(ListTemp,compara_elementos_Estructura,0);
                     Error=al_MuestraElemento_desde_hasta(ListTemp,"List Cadena",Muestra1Record ,0,ListTemp->len(ListTemp),PAGINADO);
-
 
                     ListLetrasIN= al_filter2(List, al_indexOfPotenciado,ListTemp,1);
                     Error=al_MuestraElemento_desde_hasta(ListLetrasIN,"Lista Con Letras Filtrada a partir de ListaCadena",Muestra1Record ,0,ListLetrasIN->len(ListLetrasIN),PAGINADO);
 
                     ListLetrasOUT= al_filter2(List, al_indexOfPotenciado,ListTemp,0);
                     Error=al_MuestraElemento_desde_hasta(ListLetrasOUT,"Lista SIN Letras Filtrada a partir de ListaCadena",Muestra1Record ,0,ListLetrasOUT->len(ListLetrasOUT),PAGINADO);
-
-                    //ArrayList* al_filter(ArrayList* listIn , int (*functionFilter)(void* ,void*),ArrayList* listBuscar)
-                    //ListLetrasOUT
-
-                    //compara_elementos_Estructura
                     break;
                 case 0:
                     seguir = 'n';
