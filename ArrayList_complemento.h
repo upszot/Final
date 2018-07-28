@@ -4,7 +4,25 @@
 #include "ArrayList.h"
 #include "genericas.h"
 
+/** \brief Recorre arrayList desde posicion desde, hasta la posicion hasta
+ *          paginando cada el valor que se le pasa..
+ *          y usando la funcion que se le pasa para mostrar...
+ *          dicha funcion es la que muestra los datos de 1 solo elemento
+ *
+ * \param void*
+ * \return int al_MuestraElemento_desde_hasta(ArrayList *this,char *Titulo,int
+ *
+ */
 int al_MuestraElemento_desde_hasta(ArrayList *this,char *Titulo,int (*pFunc)(void*) ,int desde,int hasta,int paginado);
+
+
+/** \brief Clona array y ordena por funcion
+ *
+ * \param void*
+ * \param void*
+ * \return ArrayList* clonaOrdenado(ArrayList *this,int
+ *
+ */
 ArrayList* clonaOrdenado(ArrayList *this,int (*pFunc)(void* ,void*),int orden);
 
 
@@ -17,6 +35,13 @@ ArrayList* clonaOrdenado(ArrayList *this,int (*pFunc)(void* ,void*),int orden);
 ArrayList* al_filter(ArrayList* listIn , int (*functionFilter)(void*));
 
 
+/** \brief Devuelve un nuevo Array generado a partir del filtro de la funcion entregada y el los elementos cargados en el listbuscar
+ *
+ * \param void*
+ * \param void*
+ * \return ArrayList* al_filter2(ArrayList* listIn , int
+ *
+ */
 ArrayList* al_filter2(ArrayList* listIn , int (*functionFilter)(void* ,void*),ArrayList* listBuscar);
 
 /** \brief Recorre ArrayList y entrega cada recorset a la funcion para que trabaje

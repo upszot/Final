@@ -57,3 +57,52 @@
 	"Estructura.h"
 	"genericas.h"
 
+1532737511 source:e:\documentos\tecnicatura\programacion\final\arraylist.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"ArrayList.h"
+
+1532737511 e:\documentos\tecnicatura\programacion\final\arraylist.h
+
+1532737511 source:e:\documentos\tecnicatura\programacion\final\arraylist_complemento.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"ArrayList.h"
+	"Estructura.h"
+	"genericas.h"
+	"ArrayList_complemento.h"
+
+1532737511 e:\documentos\tecnicatura\programacion\final\estructura.h
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"ArrayList.h"
+	"genericas.h"
+
+1532737511 e:\documentos\tecnicatura\programacion\final\genericas.h
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<ctype.h>
+
+1532737511 e:\documentos\tecnicatura\programacion\final\arraylist_complemento.h
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"ArrayList.h"
+	"genericas.h"
+
+1532737511 source:e:\documentos\tecnicatura\programacion\final\estructura.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"ArrayList.h"
+	"ArrayList_complemento.h"
+	"Estructura.h"
+	"genericas.h"
+
+1532737511 source:e:\documentos\tecnicatura\programacion\final\genericas.c
+	"genericas.h"
+

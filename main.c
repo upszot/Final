@@ -76,7 +76,7 @@ int main()
                 case 3://
                     //Error=al_MuestraElemento_desde_hasta(List,"Original  datos.cvs ",Muestra1Record ,0,List->len(List),PAGINADO);
                     cadena=get_char("Ingrese cadenade caracteres",100);
-                    printf("\n Cadena: %s\n",cadena);
+                    //printf("\n Cadena: %s\n",cadena);
 
                     Error= parserEstructuraCadena(cadena,100, ListTemp);
                     Error = al_CompletaCampo(ListTemp,completa_vocal_consonante );
@@ -100,9 +100,7 @@ int main()
 
 
                     ListLetrasIN= al_filter2(List, al_indexOfPotenciado,ListTemp);
-                    printf("Tam: %d",ListLetrasIN->len(ListLetrasIN));
-                    system("pause");
-                    Error=al_MuestraElemento_desde_hasta(ListLetrasIN,"Filtrada",Muestra1Record ,0,ListLetrasIN->len(ListLetrasIN),PAGINADO);
+                    Error=al_MuestraElemento_desde_hasta(ListLetrasIN,"Lista Filtrada con ListaCadena",Muestra1Record ,0,ListLetrasIN->len(ListLetrasIN),PAGINADO);
 
                     //ArrayList* al_filter(ArrayList* listIn , int (*functionFilter)(void* ,void*),ArrayList* listBuscar)
                     //ListLetrasOUT
