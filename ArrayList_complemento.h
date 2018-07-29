@@ -53,3 +53,6 @@ ArrayList* al_filter2(ArrayList* listIn , int (*functionFilter)(void* ,void*),Ar
  *
  */
 int al_CompletaCampo(ArrayList *this,int (*pFunc)(void*) );
+
+
+ArrayList* Al_EliminaDuplicados(ArrayList* this, int (*pFunc)(void* ,void*));

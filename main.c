@@ -28,6 +28,8 @@ int main()
 
     ArrayList *ListLetrasOUT;
     ListLetrasOUT= al_newArrayList();
+    ArrayList *ListLetrasOUT_Uniq;
+    ListLetrasOUT_Uniq= al_newArrayList();
 
     ArrayList *ListTemp;
     ListTemp= al_newArrayList();
@@ -87,6 +89,9 @@ int main()
 
                     ListLetrasOUT= al_filter2(List, al_indexOfPotenciado,ListTemp,0);
                     Error=al_MuestraElemento_desde_hasta(ListLetrasOUT,"Lista SIN Letras Filtrada a partir de ListaCadena",Muestra1Record ,0,ListLetrasOUT->len(ListLetrasOUT),PAGINADO);
+
+                    ListLetrasOUT_Uniq=Al_EliminaDuplicados(ListLetrasOUT, compara_elementos_Estructura);
+                    Error=al_MuestraElemento_desde_hasta(ListLetrasOUT_Uniq,"Lista SIN Letras Filtrada a partir de ListaCadena, SIN Duplicados",Muestra1Record ,0,ListLetrasOUT_Uniq->len(ListLetrasOUT_Uniq),PAGINADO);
                     break;
                 case 0:
                     seguir = 'n';

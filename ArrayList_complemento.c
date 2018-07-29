@@ -121,3 +121,28 @@ int al_CompletaCampo(ArrayList *this,int (*pFunc)(void*) )
     }//if(this!=NULL && Titulo!=NULL)
     return retorno;
 }
+
+
+ArrayList* Al_EliminaDuplicados(ArrayList* this, int (*pFunc)(void* ,void*))
+{
+    ArrayList* ListAux;
+    if(this!= NULL && pFunc!=NULL )
+    {
+        ListAux=al_clone(this);
+        if(ListAux!=NULL)
+        {
+            for(int i=0; i< ( ListAux->len(ListAux) ) -1 ;i++)
+            {
+                for(int j=i+1;j < ListAux->len(ListAux) ;j++)
+                {
+                    if(pFunc(al_get(ListAux,i),al_get(ListAux,j))==0)
+                    {
+                      ListAux->pop(ListAux,j);
+                      j=i+1;
+                    }
+                }//FIN for(int j=i+1;j < ListAux->len(ListAux) ;j++)
+            }//FIN for(int i=0; i< ( ListAux->len(ListAux) ) -1 ;i++)
+        }
+    }
+    return ListAux;
+}
