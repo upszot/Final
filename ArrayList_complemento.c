@@ -133,12 +133,15 @@ ArrayList* Al_EliminaDuplicados(ArrayList* this, int (*pFunc)(void* ,void*))
         {
             for(int i=0; i< ( ListAux->len(ListAux) ) -1 ;i++)
             {
-                for(int j=i+1;j < ListAux->len(ListAux) ;j++)
+                for(int j=i+1;j < ListAux->len(ListAux) ; )
                 {
                     if(pFunc(al_get(ListAux,i),al_get(ListAux,j))==0)
                     {
                       ListAux->pop(ListAux,j);
-                      j=i+1;
+                    }
+                    else
+                    {
+                        j++;
                     }
                 }//FIN for(int j=i+1;j < ListAux->len(ListAux) ;j++)
             }//FIN for(int i=0; i< ( ListAux->len(ListAux) ) -1 ;i++)
