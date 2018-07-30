@@ -65,4 +65,12 @@ int al_CompletaCampo(ArrayList *this,int (*pFunc)(void*) );
 ArrayList* Al_EliminaDuplicados(ArrayList* this, int (*pFunc)(void* ,void*));
 
 
-int al_Existen_Letras(ArrayList* listIn , int (*functionFilter)(void* ,void*),char * cadLetras);
+/** \brief Busca en el ArrayList que esten todas las letras de un string para poder formar la palabra.
+ *         Retorna 1 Cuando estan todas  ,  0 Cuando Faltan
+ *
+ * \param void*
+ * \param void*
+ * \return int gestion_Existen_Letras(ArrayList* this , int
+ *
+ */
+int gestion_Existen_Letras(ArrayList* this , int (*functionFilter)(void* ,void*),char * cadLetras);

@@ -152,36 +152,37 @@ ArrayList* Al_EliminaDuplicados(ArrayList* this, int (*pFunc)(void* ,void*))
 
 
 
-int al_Existen_Letras(ArrayList* listIn , int (*functionFilter)(void* ,void*),char * cadLetras)
+
+int gestion_Existen_Letras(ArrayList* this , int (*functionFilter)(void* ,void*),char * cadLetras)
 {//devuelve 1 si estan todas las letras.. 0 si no estan.
 
     int retorno=-1;
     ArrayList* ListAux;
-
-    if(listIn!=NULL && functionFilter!=NULL && cadLetras!=NULL )
+    int flagEncontro;
+    if(this!=NULL && functionFilter!=NULL && cadLetras!=NULL )
     {
-        ListAux=al_clone(listIn);
+        ListAux=al_clone(this);
         if(ListAux!=NULL)
         {
             retorno=1;
-
-            for(int i=0; i<strlen(cadLetras) || retorno==0 ;i++)
+            for(int i=0; i<strlen(cadLetras) ;i++)
             {
+                flagEncontro=0;
                 for(int j=0;j<ListAux->len(ListAux);j++)
                 {
                     if( functionFilter(cadLetras[i],ListAux->get(ListAux,j) )== 0 )
                     {//Existe=0    Esta la letra
                         ListAux->pop(ListAux,j);
-                        break;
-                    }
-                    else
-                    {//no esta la letra
-                        retorno=0;
+                        flagEncontro=1;
                         break;
                     }
                 }//fin for recorre ArrayList
-            }//fin for recorre caracteres string
 
+                if(flagEncontro==0)
+                {//No encontro la letra en el ArrayList
+                    retorno=0;
+                    break;                }
+            }//fin for recorre caracteres string
         }// FIN if(ListAux!=NULL)
     }//FIN if(listIn!=NULL && functionFilter!=NULL && cadLetras!=NULL )
     return retorno;
