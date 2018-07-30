@@ -342,4 +342,25 @@ int funcionQueFiltra(void* item, ArrayList* this)
 }
 */
 
+int compara_pElemento_con_String(char* cadena,void* pElement)
+{
+    int retorno;
+    ELetra *tmp_1;
+    tmp_1=(ELetra * ) pElement;
 
+
+    if(tmp_1->letra > tmp_2->letra)
+    {
+        retorno=1;
+    }
+    else
+    {
+        retorno=-1;
+        if(tmp_1->letra == tmp_2->letra)
+        {
+            retorno=0;
+        }
+
+    }
+    return retorno;
+}

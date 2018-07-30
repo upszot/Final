@@ -159,13 +159,18 @@ int al_Existen_Letras(ArrayList* listIn , int (*functionFilter)(void* ,void*),ch
     if(listIn!=NULL && functionFilter!=NULL && cadLetras!=NULL )
     {
         retorno=1;
-        for(int i=0;i<listIn->len(listIn);i++)
+
+        for(int i=0;i<strlen(cadLetras);i++)
         {
-                if( functionFilter(cadLetras,listIn->get(listIn,i) )== 0 )
+            for(int j=0;j<listIn->len(listIn);j++)
+            {
+                if( functionFilter(cadLetras[i],listIn->get(listIn,j) )== 0 )
                 {//Existe=0    NO esta la letra
                     retorno=0
+                    break;
                 }
-        }
+            }//fin for recorre ArrayList
+        }//fin for recorre caracteres string
         return retorno;
     }
 }
