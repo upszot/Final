@@ -63,3 +63,6 @@ int al_CompletaCampo(ArrayList *this,int (*pFunc)(void*) );
  *
  */
 ArrayList* Al_EliminaDuplicados(ArrayList* this, int (*pFunc)(void* ,void*));
+
+
+int al_Existen_Letras(ArrayList* listIn , int (*functionFilter)(void* ,void*),char * cadLetras);

@@ -50,3 +50,4 @@ int Alumno_setName(EAlumno* this, const char* name);
 int funcionQueFiltra(void* item);
 */
 
+int compara_pElemento_con_String(void* Letra,void* pElement);

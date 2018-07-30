@@ -74,7 +74,7 @@
 	"genericas.h"
 	"ArrayList_complemento.h"
 
-1532737511 e:\documentos\tecnicatura\programacion\final\estructura.h
+1532958098 e:\documentos\tecnicatura\programacion\final\estructura.h
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
@@ -87,14 +87,14 @@
 	<string.h>
 	<ctype.h>
 
-1532837004 e:\documentos\tecnicatura\programacion\final\arraylist_complemento.h
+1532958098 e:\documentos\tecnicatura\programacion\final\arraylist_complemento.h
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
 	"ArrayList.h"
 	"genericas.h"
 
-1532757038 source:e:\documentos\tecnicatura\programacion\final\estructura.c
+1532958030 source:e:\documentos\tecnicatura\programacion\final\estructura.c
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
