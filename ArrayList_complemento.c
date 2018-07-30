@@ -156,21 +156,33 @@ int al_Existen_Letras(ArrayList* listIn , int (*functionFilter)(void* ,void*),ch
 {//devuelve 1 si estan todas las letras.. 0 si no estan.
 
     int retorno=-1;
+    ArrayList* ListAux;
+
     if(listIn!=NULL && functionFilter!=NULL && cadLetras!=NULL )
     {
-        retorno=1;
-
-        for(int i=0;i<strlen(cadLetras);i++)
+        ListAux=al_clone(listIn);
+        if(ListAux!=NULL)
         {
-            for(int j=0;j<listIn->len(listIn);j++)
+            retorno=1;
+
+            for(int i=0; i<strlen(cadLetras) || retorno==0 ;i++)
             {
-                if( functionFilter(cadLetras[i],listIn->get(listIn,j) )== 0 )
-                {//Existe=0    NO esta la letra
-                    retorno=0;
-                    break;
-                }
-            }//fin for recorre ArrayList
-        }//fin for recorre caracteres string
-        return retorno;
-    }
+                for(int j=0;j<ListAux->len(ListAux);j++)
+                {
+                    if( functionFilter(cadLetras[i],ListAux->get(ListAux,j) )== 0 )
+                    {//Existe=0    Esta la letra
+                        ListAux->pop(ListAux,j);
+                        break;
+                    }
+                    else
+                    {//no esta la letra
+                        retorno=0;
+                        break;
+                    }
+                }//fin for recorre ArrayList
+            }//fin for recorre caracteres string
+
+        }// FIN if(ListAux!=NULL)
+    }//FIN if(listIn!=NULL && functionFilter!=NULL && cadLetras!=NULL )
+    return retorno;
 }
