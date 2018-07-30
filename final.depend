@@ -65,7 +65,7 @@
 
 1532737511 e:\documentos\tecnicatura\programacion\final\arraylist.h
 
-1532835333 source:e:\documentos\tecnicatura\programacion\final\arraylist_complemento.c
+1532836664 source:e:\documentos\tecnicatura\programacion\final\arraylist_complemento.c
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
@@ -87,7 +87,7 @@
 	<string.h>
 	<ctype.h>
 
-1532833613 e:\documentos\tecnicatura\programacion\final\arraylist_complemento.h
+1532837004 e:\documentos\tecnicatura\programacion\final\arraylist_complemento.h
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
@@ -106,7 +106,7 @@
 1532737511 source:e:\documentos\tecnicatura\programacion\final\genericas.c
 	"genericas.h"
 
-1532834298 source:e:\documentos\tecnicatura\programacion\final\main.c
+1532837273 source:e:\documentos\tecnicatura\programacion\final\main.c
 	<stdio.h>
 	<stdlib.h>
 	<string.h>

@@ -55,4 +55,11 @@ ArrayList* al_filter2(ArrayList* listIn , int (*functionFilter)(void* ,void*),Ar
 int al_CompletaCampo(ArrayList *this,int (*pFunc)(void*) );
 
 
+/** \brief Devuelve un nuevo Array eliminando los elementos duplicados de acuerdo a la funcion que se le pasa.
+ *
+ * \param void*
+ * \param void*
+ * \return ArrayList* Al_EliminaDuplicados(ArrayList* this, int
+ *
+ */
 ArrayList* Al_EliminaDuplicados(ArrayList* this, int (*pFunc)(void* ,void*));
